@@ -1,92 +1,65 @@
 [
 	{
 	  "id": 1,
-	  "title": "Spaghetti Carbonara",
-	  "image": "https://images.pexels.com/photos/29039085/pexels-photo-29039085/free-photo-of-creamy-spaghetti-carbonara-in-ceramic-dish.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-	  "ingredients": [
-		"200g spaghetti",
-		"100g pancetta",
-		"2 large eggs",
-		"50g pecorino cheese",
-		"50g parmesan cheese",
-		"Freshly ground black pepper",
-		"Salt"
+	  "title": "Pikachu Dumpling",
+	  "image": "https://static.wixstatic.com/media/058403_222e0e81e350469caaf7107c66d287d3~mv2.jpg/v1/fill/w_900,h_600,al_c,q_85/058403_222e0e81e350469caaf7107c66d287d3~mv2.jpg",
+	  "ingredients":[
+		"Pikachu",
+		"Cabbage",
+		"Ginger", 
+		"Soy Sauce", 
+		"White Pepper"
 	  ],
-	  "instructions": "Cook the spaghetti. In a separate pan, cook the pancetta until crispy. Beat the eggs and mix with grated cheeses and pepper. Combine spaghetti, pancetta, and egg mixture off the heat to create a creamy sauce.",
-	  "prepTime": 20,
-	  "difficulty": "Medium"
+	  "cost": 10
 	},
 	{
 	  "id": 2,
-	  "title": "Tomato Basil Soup",
-	  "image": "https://images.pexels.com/photos/17302314/pexels-photo-17302314/free-photo-of-a-creamy-tomato-soup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-	  "ingredients": [
-		"1 tbsp olive oil",
-		"1 onion, chopped",
-		"2 garlic cloves, minced",
-		"800g canned tomatoes",
-		"500ml vegetable stock",
-		"1 cup fresh basil leaves",
-		"Salt",
-		"Pepper"
+	  "title": "Baked Brie with Combee Honey",
+	  "image": "https://celebratingsweets.com/wp-content/uploads/2016/12/Honey-Rosemary-Walnut-Baked-Brie-3-500x500.jpg",
+	  "ingredients":[
+		"Brie",
+		"Combee Honey"
 	  ],
-	  "instructions": "Sauté onion and garlic in olive oil until softened. Add tomatoes and stock, and simmer for 15 minutes. Add basil, blend until smooth, and season with salt and pepper.",
-	  "prepTime": 30,
-	  "difficulty": "Easy"
+	  "cost": 5
 	},
 	{
 	  "id": 3,
-	  "title": "Chicken Curry",
-	  "image": "https://images.pexels.com/photos/14691481/pexels-photo-14691481.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-	  "ingredients": [
-		"2 tbsp vegetable oil",
-		"1 onion, chopped",
-		"2 garlic cloves, minced",
-		"1 tbsp ginger, grated",
-		"1 tbsp curry powder",
-		"400g chicken breast, diced",
-		"400ml coconut milk",
-		"1 bell pepper, sliced",
-		"Salt",
-		"Pepper"
-	  ],
-	  "instructions": "Cook onion, garlic, and ginger in oil until fragrant. Add curry powder and chicken, and cook until browned. Add coconut milk and bell pepper, and simmer for 20 minutes.",
-	  "prepTime": 40,
-	  "difficulty": "Medium"
+	  "title": "Kingler-Stuffed Foongus Caps",
+	  "image": "https://keviniscooking.com/wp-content/uploads/2019/12/Crab-Stuffed-Mushrooms-square.jpg",
+	  "ingredients": 
+	  ["Foongus caps",
+	   	"Kingler meat", 
+		"Panko breadcrumbs", 
+		"Cream cheese", 
+		"Parmesan cheese", 
+		"Oregano", 
+		"Garlic Salt"],
+	  "cost": 15
 	},
 	{
 	  "id": 4,
-	  "title": "Avocado Toast",
-	  "image": "https://images.pexels.com/photos/1656685/pexels-photo-1656685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-	  "ingredients": [
-		"1 ripe avocado",
-		"2 slices of bread",
-		"Salt",
-		"Pepper",
-		"Chili flakes (optional)"
-	  ],
-	  "instructions": "Toast the bread. Mash the avocado and spread it on the toast. Season with salt, pepper, and chili flakes.",
-	  "prepTime": 10,
-	  "difficulty": "Easy"
+	  "title": "Blackened Magikarp",
+	  "image": "https://thehealthycookingblog.com/public/uploads/2018/05/053-2.jpg",
+	  "ingredients": 
+	  ["Magikarp filet", 
+	  "Blackening seasoning mix", 
+	  "Butter"],
+	  "cost": 15
 	},
 	{
 	  "id": 5,
-	  "title": "Chocolate Chip Cookies",
-	  "image": "https://images.pexels.com/photos/14133099/pexels-photo-14133099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+	  "title": "Nashville Hot Combusken Sandwich",
+	  "image": "https://www.seriouseats.com/thmb/zZLQZ3IvBpcq-NfahgHLZYwvbwg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20231117-SEA-NashvilleHotChicken-VictorProtasio-01-83231777673a434fa85b8f0ef524b4c9.jpg",
 	  "ingredients": [
-		"1 cup butter, softened",
-		"1 cup sugar",
-		"1 cup brown sugar",
-		"2 eggs",
-		"2 tsp vanilla extract",
-		"3 cups flour",
-		"1 tsp baking soda",
-		"0.5 tsp salt",
-		"2 cups chocolate chips"
-	  ],
-	  "instructions": "Cream butter and sugars. Add eggs and vanilla. Mix in flour, baking soda, and salt. Fold in chocolate chips. Bake at 350°F (175°C) for 10-12 minutes.",
-	  "prepTime": 25,
-	  "difficulty": "Easy"
+		"Combusken", 
+		"Buttermilk", 
+		"Flour", 
+		"Oil", 
+		"Brown sugar", 
+		"Garlic Powder", 
+		"Cayenne Powder",
+		"Pickles"],
+	  "cost": 15
 	}
   ]
   

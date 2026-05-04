@@ -1,12 +1,12 @@
 
 const recipeList = document.querySelector(".recipe-list")
+const eventList = document.querySelector(".sidenav")
 const modal = document.getElementById("recipeModal")
 const closeButton = document.querySelector(".close-button")
 
 const modalElements = {
 	title: document.getElementById('modalTitle'),
-	prepTime: document.getElementById('modalPrepTime'),
-	difficulty: document.getElementById('modalDifficulty'),
+	cost: document.getElementById('modalCost'),
 	instructions: document.getElementById('modalInstructions'),
 	image: document.getElementById('modalImage')
 }
@@ -16,31 +16,49 @@ const getRecipes = async () => {
 	return await response.json()
 }
 
+const getEvents = async () => {
+	const response = await fetch('/api/v1/events')
+	return await response.json()
+}
+
 const getRecipe = async id => {
 	const response = await fetch(`/api/v1/recipe/${id}`)
 	return await response.json()
 }
 
 const showRecipeList = recipes => {
-	recipes?.forEach(({id, title, image, prepTime, difficulty}) => {
+	recipes?.forEach(({id, title, image, cost}) => {
 		const recipeItem = document.createElement("div")
 		recipeItem.className = "recipe-item"
 		recipeItem.innerHTML = `
 			<img src="${image}" alt="${title}">
 			<h2>${title}</h2>
-			<p><strong>Prep Time:</strong> ${prepTime} mins | <strong>Difficulty:</strong> ${difficulty}</p>
+			<p><strong>Cost:</strong> $${cost}</p>
 		`
 		recipeItem.onclick = () => showRecipeDetails(id)
 		recipeList.appendChild(recipeItem)
 	})
 }
 
+const showEvents = events => {
+	events?.forEach(({id, title}) => {
+		const eventItem = document.createElement("a")
+		eventItem.className = "event-item"
+		eventItem.href = '#'
+		eventItem.textContent = `${title}`
+
+		const link = "/events/"+ {id}.id
+		eventItem.onclick = () => window.location.href = link;
+		eventList.appendChild(eventItem)
+	})
+}
+
 const showRecipeDetails = async id => {
 
-	const {title, image, ingredients, prepTime} = await getRecipe(id)
+	const {title, image, ingredients, cost} = await getRecipe(id)
 
 	modalElements.title.textContent = title
-	modalElements.prepTime.textContent = `${prepTime} mins`
+	modalElements.cost.textContent = `$${cost}`
 	modalElements.image.src = image
 
 	const ingredientsList = document.getElementById("modalIngredients")
@@ -64,4 +82,6 @@ window.onclick = event => {
 ;(async () => {
 	const recipes = await getRecipes()
 	showRecipeList(recipes)
+	const events = await getEvents()
+	showEvents(events)
 })()

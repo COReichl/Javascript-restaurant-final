@@ -1,10 +1,16 @@
 
 const router = require('express').Router()
 const recipes = require('../../../data/recipes.json')
+const events = require('../../../data/events.json')
 
 //returns all recipes
 router.get('/', (request, response) => {
-    const found = recipes.map(({id, title, image, prepTime, difficulty}) => ({id, title, image, prepTime, difficulty}))
+    const found = recipes.map(({id, title, image, cost}) => ({id, title, image, cost}))
+    response.send(found)
+})
+
+router.get('/events', (request, response) => {
+    const found = events.map(({id, title, location, date}) => ({id, title, location, date}))
     response.send(found)
 })
 
