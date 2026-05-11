@@ -5,12 +5,29 @@ const events = require('../../../data/events.json')
 
 //returns all recipes
 router.get('/', (request, response) => {
-    const found = recipes.map(({id, title, image, cost}) => ({id, title, image, cost}))
+    const found = recipes.map(({id, title, image, description, cost}) => ({id, title, image, description, cost}))
+    response.send(found)
+})
+
+router.get('/menu', (request, response) => {
+    const found = recipes.map(({id, title, image, description, cost}) => ({id, title, image, description, cost}))
+    response.send(found)
+})
+
+router.get('/menu/:id', (request, response) => {
+    const { id } = request.params
+    const found = recipes.find(p => p.id.toString() === id)
     response.send(found)
 })
 
 router.get('/events', (request, response) => {
     const found = events.map(({id, title, location, date}) => ({id, title, location, date}))
+    response.send(found)
+})
+
+router.get('/events/:id', (request, response) => {
+    const { id } = request.params
+    const found = events.find(p => p.id.toString() === id)
     response.send(found)
 })
 

@@ -1,32 +1,37 @@
 [
     {
 	  "id": 1,
-	  "title": "250 Street Name",
+	  "title": "GO Fest",
 	  "location": "250 Street Name, Appleton, WI",
+    "time": "12:30 pm - 9:00 am",
       "date": "10-16-2025"
     },
     {
 	  "id": 2,
-	  "title": "19000 Drive Name",
+	  "title": "Community Days",
 	  "location": "19000 Drive Name, Green Bay, WI",
-      "date": "10-17-2025"
+    "time": "8:00 am - 10:00pm",
+      "date": "10-17-2025 to 10-19-2025"
     },
     {
 	  "id": 3,
-	  "title": "687 Road Name",
+	  "title": "TCG Regionals",
 	  "location": "687 Road Name, De Pere, WI",
+    "time": "9:00 am - 9:00 pm",
       "date": "10-17-2025"
     },
     {
 	  "id": 4,
-	  "title": "324 Avenue Name",
+	  "title": "Pokemon GO International Championship",
 	  "location": "324 Avenue Name, Milwaukee, WI",
+    "time": "12:00 pm - 8:00 pm",
       "date": "10-17-2025"
     },
     {
 	  "id": 5,
-	  "title": "456 Place Name",
+	  "title": "Scarlet/Violet Release Party",
 	  "location": "456 Place Name, Oshkosh, WI",
+    "time": "11:00 am - 2:00pm",
       "date": "10-17-2025"
     }
 ]

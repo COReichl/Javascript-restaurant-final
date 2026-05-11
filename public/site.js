@@ -27,15 +27,17 @@ const getRecipe = async id => {
 }
 
 const showRecipeList = recipes => {
-	recipes?.forEach(({id, title, image, cost}) => {
+	recipes?.forEach(({id, title, image, description, cost}) => {
 		const recipeItem = document.createElement("div")
 		recipeItem.className = "recipe-item"
 		recipeItem.innerHTML = `
 			<img src="${image}" alt="${title}">
 			<h2>${title}</h2>
+			<p><strong>Description:</strong> ${description}</p>
 			<p><strong>Cost:</strong> $${cost}</p>
 		`
-		recipeItem.onclick = () => showRecipeDetails(id)
+		const link = "/menu/"+ {id}.id
+		recipeItem.onclick = () => window.location.href = link;
 		recipeList.appendChild(recipeItem)
 	})
 }

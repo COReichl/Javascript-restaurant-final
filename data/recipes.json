@@ -10,6 +10,7 @@
 		"Soy Sauce", 
 		"White Pepper"
 	  ],
+	  "description": "3 dumblings filled with meat and vegetables with a side of soy sauce",
 	  "cost": 10
 	},
 	{
@@ -20,6 +21,7 @@
 		"Brie",
 		"Combee Honey"
 	  ],
+	  "description": "A slice of brie cheese with combee honey drizzled over top",
 	  "cost": 5
 	},
 	{
@@ -34,6 +36,7 @@
 		"Parmesan cheese", 
 		"Oregano", 
 		"Garlic Salt"],
+		"description": "3 foongus caps stuffed with kingler meat",
 	  "cost": 15
 	},
 	{
@@ -44,6 +47,7 @@
 	  ["Magikarp filet", 
 	  "Blackening seasoning mix", 
 	  "Butter"],
+	  "description": "A well cooked magikarp filet seasoned with a delicious blackening seasoning mix.",
 	  "cost": 15
 	},
 	{
@@ -54,11 +58,13 @@
 		"Combusken", 
 		"Buttermilk", 
 		"Flour", 
+		"Pepper Jack",
 		"Oil", 
 		"Brown sugar", 
 		"Garlic Powder", 
 		"Cayenne Powder",
 		"Pickles"],
+		"description": "A spicy chicken tasting sandwich topped with cheese and pickles",
 	  "cost": 15
 	}
   ]
