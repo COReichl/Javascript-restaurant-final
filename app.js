@@ -1,6 +1,8 @@
 
 const express = require('express')
 const colors = require('ansi-colors')
+const dns = require('node:dns');
+dns.setServers(['8.8.8.8', '1.1.1.1']); 
 const app = express()
 const port = 3010
 
