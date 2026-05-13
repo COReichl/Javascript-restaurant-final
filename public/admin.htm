@@ -20,21 +20,37 @@
 	<ul class="hornav">
   		<li><a href="/">Menu</a></li>
   		<li><a href="/">Contact</a></li>
-  		<li><a href="/admin">Add Item</a></li>
+  		<li><a href="/admin">Add New Items</a></li>
 	</ul>
 	<div class="form-container">
-	<form style="font-size: 25px; margin: 20px;">
-		<label for="itemName">New Item:</label><br>
+	<form style="font-size: 25px; margin: 20px;" id="itemForm" name="itemForm">
+		<h2>New Menu Item</h2>
+		<label for="itemName">Name:</label><br>
   		<input type="text" id="itemName" name="itemName"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
-		<label for="itemName">Item Image:</label><br>
+		<label for="image">Image Link:</label><br>
   		<input type="text" id="image" name="image"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
-		<label for="itemName">Description:</label><br>
+		<label for="description">Description:</label><br>
   		<input type="text" id="description" name="description"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
   		<label for="price">Price:</label><br>
   		<input type="text" id="price" name="price"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
 		<label for="ingredients">Ingredients:</label><br>
   		<input type="text" id="ingredients" name="ingredients"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
-		<input type="submit" value="Submit"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;">
+		<input type="submit" value="Submit Item"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;">
+	</form>
+	</div>
+	<div class="form-container">
+		<br>
+		<h2>New Event</h2>
+	<form style="font-size: 25px; margin: 20px;" id="eventForm" name="eventForm">
+		<label for="eventName">Name:</label><br>
+  		<input type="text" id="eventName" name="eventName"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
+		<label for="location">Location:</label><br>
+  		<input type="text" id="location" name="location"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
+		<label for="date">Date:</label><br>
+  		<input type="text" id="date" name="date"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
+  		<label for="time">Time:</label><br>
+  		<input type="text" id="time" name="time"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
+		<input type="submit" value="Submit Event"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;">
 	</form>
 	</div>
 </body>
