@@ -9,13 +9,16 @@
 ### Recipe List Endpoint
 GET {{apiUrl}}
 
+### Menu List
+GET {{apiUrl}}menu
+
 ### Menu by ID
 GET {{apiUrl}}menu/1
 
 ### Events by ID
-GET {{apiUrl}}events/1
+GET {{apiUrl}}events/2
 
-###
+### Events List
 GET {{apiUrl}}events
 
 ### Add Menu item Endpoint
@@ -38,11 +41,11 @@ Content-Type: application/json
 }
 	
 ### Add Event Endpoint
-POST {{apiUrl}}/menu
+POST {{apiUrl}}/events
 Content-Type: application/json
 
 {
-  "id": 5,
+  "id": 6,
   "title": "GO Better Fest",
   "location": "250 Street Name, Appleton, WI",
   "time": "12:30 pm - 9:00 am",

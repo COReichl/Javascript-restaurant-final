@@ -4,7 +4,7 @@ const recipes = require('../../../data/recipes.json')
 const events = require('../../../data/events.json')
 const { getCollection, ObjectId } = require('../../../dbconnect')
 
-//returns all recipes
+//returns all menu items
 router.get('/', async (request, response) => {
     const {id, title, image, description, cost} = request.params
     const collection = await getCollection('Food-Truck', 'Food')
@@ -12,7 +12,7 @@ router.get('/', async (request, response) => {
     response.send(found)
 })
 
-//returns menu
+//returns menu items
 router.get('/menu', async (request, response) => {
     const {id, title, image, description, cost} = request.params
     const collection = await getCollection('Food-Truck', 'Food')
@@ -20,7 +20,7 @@ router.get('/menu', async (request, response) => {
     response.send(found)
 })
 
-//returns menu by id
+//returns menu item by id
 router.get('/menu/:id', async (request, response) => {
     const { id } = request.params
     const collection = await getCollection('Food-Truck', 'Food')
@@ -31,12 +31,12 @@ router.get('/menu/:id', async (request, response) => {
 
 //returns events
 router.get('/events', async (request, response) => {
-    // const {id, title, location, date} = request.params
-    // const collection = await getCollection('Food-Truck', 'events')
-    // const found = await collection.find().toArray()
-    // response.send(found)
-    const found = events.map(({id, title, location, date}) => ({id, title, location, date}))
+    const {id, title, location, date} = request.params
+    const collection = await getCollection('Food-Truck', 'Events')
+    const found = await collection.find().toArray()
     response.send(found)
+    // const found = events.map(({id, title, location, date}) => ({id, title, location, date}))
+    // response.send(found)
 })
 
 //returns events by id
@@ -69,7 +69,7 @@ router.post('/menu', async (request, response) => {
 //adds a new event
 router.post('/events', async (request, response) => {
     const { id, title, location, time, date } = request.body
-    const collection = await getCollection('Food-Truck', 'Food')
+    const collection = await getCollection('Food-Truck', 'Events')
     const { acknowledged, insertedId } = await collection.insertOne({ id, title, location, time, date })
     response.send({ acknowledged, insertedId })
 })
