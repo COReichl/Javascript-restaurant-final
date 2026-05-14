@@ -11,10 +11,15 @@ body {
     background-color: #f8f9fa;
 }
 .form-container {
-    width: 300px;
-    margin: 100px auto; /* Centers horizontally */
+    display: flex;
+    gap: 20px; /* Space between forms */
+    justify-content: space-around;
+  }
+  form {
+    border: 1px solid #ccc;
     padding: 20px;
-}
+    width: 45%; /* Adjust width for desired spacing */
+  }
 
 /* Header Section */
 .hero {
