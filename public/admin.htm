@@ -25,30 +25,93 @@
 	<div class="form-container">
 	<form style="font-size: 25px; margin: 20px;" id="itemForm" name="itemForm" action="#">
 		<h2>New Menu Item</h2>
-		<label for="itemName">Name:</label><br>
-  		<input type="text" id="itemName" name="itemName"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
+		<label for="title">Name:</label><br>
+  		<input type="text" id="title" name="title"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
 		<label for="image">Image Link:</label><br>
   		<input type="text" id="image" name="image"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
 		<label for="description">Description:</label><br>
   		<input type="text" id="description" name="description"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
-  		<label for="price">Price:</label><br>
-  		<input type="text" id="price" name="price"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
-		<label for="ingredients">Ingredients:</label><br>
-  		<input type="text" id="ingredients" name="ingredients"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
-		<input type="submit" value="Submit Item"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;">
+  		<label for="cost">Price:</label><br>
+  		<input type="text" id="cost" name="cost"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
+		<button type="submit" value="Submit Event"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;">Submit Item</button>
 	</form>
 	<form style="font-size: 25px; margin: 20px;" id="eventForm" name="eventForm" action="#">
 		<h2>New Event</h2>
-		<label for="eventName">Name:</label><br>
-  		<input type="text" id="eventName" name="eventName"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
+		<label for="title">Name:</label><br>
+  		<input type="text" id="title" name="title"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
 		<label for="location">Location:</label><br>
   		<input type="text" id="location" name="location"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
 		<label for="date">Date:</label><br>
   		<input type="text" id="date" name="date"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
   		<label for="time">Time:</label><br>
   		<input type="text" id="time" name="time"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;"><br>
-		<input type="submit" value="Submit Event"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;">
+		<button type="submit" value="Submit Event"  style="margin-top:20px; margin-bottom:20px; font-size: 20px;">Submit Event</button>
 	</form>
+	<script>
+		//Post new menu item from new item form data
+		const newItemForm = document.getElementById('itemForm');
+
+		newItemForm.addEventListener('submit', async (e) => {
+			e.preventDefault()
+
+			
+			const formData = new FormData(newItemForm);
+			
+			
+			const data = Object.fromEntries(formData.entries())
+
+			
+			try {
+			const response = await fetch('/api/v1/menu', {
+				method: 'POST',
+				headers: {
+				'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(data)
+			});
+
+			if (response.ok) {
+				console.log('Success!')
+			}
+			} catch (error) {
+			console.error('Error:', error)
+			}
+
+			document.getElementById('itemForm').reset()
+		});
+
+		//Post new event from new event form data
+		const newEventForm = document.getElementById('eventForm');
+
+		newEventForm.addEventListener('submit', async (e) => {
+			e.preventDefault()
+
+			
+			const formData = new FormData(newEventForm);
+			
+			
+			const data = Object.fromEntries(formData.entries())
+
+			
+			try {
+			const response = await fetch('/api/v1/events', {
+				method: 'POST',
+				headers: {
+				'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(data)
+			});
+
+			if (response.ok) {
+				console.log('Success!')
+			}
+			} catch (error) {
+			console.error('Error:', error)
+			}
+
+			document.getElementById('eventForm').reset()
+		});
+	</script>
 	</div>
 </body>
 

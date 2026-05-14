@@ -35,7 +35,7 @@ router.get('/events', async (request, response) => {
     const collection = await getCollection('Food-Truck', 'Events')
     const found = await collection.find().toArray()
     response.send(found)
-    // const found = events.map(({id, title, location, date}) => ({id, title, location, date}))
+    // const found = events.map(({id, name, location, date}) => ({id, name, location, date}))
     // response.send(found)
 })
 
@@ -47,16 +47,6 @@ router.get('/events/:id', async(request, response) => {
     if(found)response.send(found)
     else response.send({ error: {message: `could not find event with id: ${id}`}})
 })
-
-//gets the recipe with the specified id
-// router.get('/recipe/:id', (request, response) => {
-//     //gets the specified id
-//     const { id } = request.params
-//     //finds the id in the list of objects
-//     const found = recipes[id-1]
-//     //sends the specified recipe
-//     response.send(found)
-// })
 
 //adds a new menu item
 router.post('/menu', async (request, response) => {
