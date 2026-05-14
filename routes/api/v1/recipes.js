@@ -50,16 +50,19 @@ router.get('/events/:id', async(request, response) => {
 
 //adds a new menu item
 router.post('/menu', async (request, response) => {
-    const { id, title, image, ingredients, description, cost } = request.body
     const collection = await getCollection('Food-Truck', 'Food')
+    const total = await collection.countDocuments() + 1
+    const { id = total, title, image, ingredients = [], description, cost } = request.body
+    console.log({ id, title, image, ingredients, description, cost })
     const { acknowledged, insertedId } = await collection.insertOne({ id, title, image, ingredients, description, cost })
-    response.send({ acknowledged, insertedId })
+     response.send({ acknowledged, insertedId })
 })
 
 //adds a new event
 router.post('/events', async (request, response) => {
-    const { id, title, location, time, date } = request.body
     const collection = await getCollection('Food-Truck', 'Events')
+    const total = await collection.countDocuments() + 1
+    const { id = total, title, location, time, date } = request.body
     const { acknowledged, insertedId } = await collection.insertOne({ id, title, location, time, date })
     response.send({ acknowledged, insertedId })
 })
